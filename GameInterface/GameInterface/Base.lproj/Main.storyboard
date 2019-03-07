@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="player ID" textAlignment="center" minimumFontSize="17" background="blank" translatesAutoresizingMaskIntoConstraints="NO" id="klD-tL-LL3">
+                                <rect key="frame" x="53" y="226" width="292" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.29296700590000002" green="0.18438785469999999" blue="0.922758415" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds4-fP-9qq">
+                                <rect key="frame" x="102" y="321" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="up" image="up"/>
+                                <connections>
+                                    <action selector="didTapUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTa-1K-XiY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-8y-7VE">
+                                <rect key="frame" x="178" y="397" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="right" image="right"/>
+                                <connections>
+                                    <action selector="didTapRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12t-Sj-56F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-ln-vFw">
+                                <rect key="frame" x="25" y="397" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="left" image="left"/>
+                                <connections>
+                                    <action selector="didTapLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRX-Q8-xm5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-Tf-ZkJ">
+                                <rect key="frame" x="102" y="473" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="down" image="down-1"/>
+                                <connections>
+                                    <action selector="didTapDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spy-DW-PB4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downButton" destination="yiz-Tf-ZkJ" id="HA2-Dk-Sdh"/>
+                        <outlet property="leftButton" destination="0qm-ln-vFw" id="ey6-6b-2iy"/>
+                        <outlet property="playerIdTextField" destination="klD-tL-LL3" id="rty-fw-sw2"/>
+                        <outlet property="rightButton" destination="wCO-8y-7VE" id="IwX-gO-hr0"/>
+                        <outlet property="upButton" destination="ds4-fP-9qq" id="hhp-H9-uz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="169.21182266009853"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blank" width="582" height="70"/>
+        <image name="down-1" width="314" height="314"/>
+        <image name="left" width="314" height="314"/>
+        <image name="right" width="314" height="314"/>
+        <image name="up" width="314" height="314"/>
+    </resources>
+</document>
